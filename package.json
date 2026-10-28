@@ -1,0 +1,26 @@
+{
+  "name": "metronome",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "preview": "node scripts/preview.mjs",
+    "verify:engine": "tsc lib/engine.ts lib/meter.ts scripts/verify-engine.ts --outDir .verify --module commonjs --target es2022 --esModuleInterop --skipLibCheck --moduleResolution node --lib es2022,dom && node .verify/scripts/verify-engine.js"
+  },
+  "dependencies": {
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "typescript": "^5"
+  }
+}
